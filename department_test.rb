@@ -10,7 +10,7 @@ class DepartmentTest < Minitest::Test
 
   def test_add_employee_to_department
        create = Department.new(dept_name:"Testing if Dept shows")
-       jones = Employees.new(l_name: "jones", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
+       jones = Employee.new(l_name: "jones", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
 
        assert_equal "Paige", create.add_employee("Paige")
 
@@ -23,9 +23,10 @@ class DepartmentTest < Minitest::Test
 
   def test_get_all_dept_employees
     create = Department.new(dept_name:"Testing if Dept shows")
-    jones = Employees.new(l_name: "jones", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
+    jones = Employee.new(l_name: "jones", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
+    jj = Employee.new(l_name: "jj", f_name: "lisa", email: "ljones4521@gmail.com", phone: "4102796970", salary: 10)
+    assert_equal "jonesjj",(jones.l_name + jj.l_name)
 
-    #assert_equal "Paige Lisa",
   end
 
   def test_get_dept_name
@@ -39,6 +40,6 @@ class DepartmentTest < Minitest::Test
       neely = Employee.new(l_name: "neely", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 50)
       jenny = Employee.new(l_name: "jenny", f_name: "Jen", email: "ljones4521yahoo.com", phone: "4102796970", salary: 50)
 
-      assert = 150.00, jones.salry + neely.salary + jenny.salary
-  end
+      assert_equal 150.00, jones.salary + neely.salary + jenny.salary
+    end
 end

@@ -34,8 +34,10 @@ class Department
   #end
 
   def department_salary_raise
-      
+
   end
 
 end
+
+
 #Add an employee to a deparment...do I do this here or in the employee class.  What'ts
