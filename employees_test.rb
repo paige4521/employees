@@ -9,7 +9,7 @@ class EmployeeTest < Minitest::Test
 
     def test_get_name
 
-      create = Employee.new(l_name: "jones", f_name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
+      create = Employee.new(name: "jones", name: "lisa", email: "ljones4521yahoo.com", phone: "4102796970", salary: 10)
       assert_equal "lisa jones", create.name
     end
 
@@ -28,7 +28,7 @@ class EmployeeTest < Minitest::Test
     assert_equal "Y", create.employee_pass_fail("Y")
   end
 
-  #def test_dept_salary
-
+  def test_get_dept_salary
+      create = Employee.new
 
 end
